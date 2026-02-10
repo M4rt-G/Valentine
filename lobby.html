@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Lobby 💕</title>
+    <link rel="stylesheet" href="lobby-styles.css">
+</head>
+<body>
+    <div class="hearts-background"></div>
+    
+    <div class="container">
+        <h1 class="title">Valentine's Game Lobby 💕</h1>
+        
+        <div class="players-section">
+            <h2 class="section-title">Players Online</h2>
+            <div id="playersList" class="players-list">
+                <!-- Players will be added here dynamically -->
+            </div>
+        </div>
+        
+        <!-- Categories Setup Section -->
+        <div class="categories-setup">
+            <h2 class="section-title">Game Categories</h2>
+            <p class="categories-subtitle">Choose your categories before starting</p>
+            
+            <div id="categoriesList" class="categories-grid">
+                <!-- Categories will be shown here -->
+            </div>
+            
+            <div class="add-category-container">
+                <input type="text" id="newCategory" placeholder="Add custom category..." maxlength="30">
+                <button id="addCategoryBtn" class="btn-add-category">Add +</button>
+            </div>
+        </div>
+        
+        <div class="game-info">
+            <p class="waiting-text" id="waitingText">Waiting for players to join...</p>
+        </div>
+        
+        <button id="startGameBtn" class="btn-start" disabled>
+            Start Basta! 🎮
+        </button>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="lobby.js"></script>
+</body>
+</html>

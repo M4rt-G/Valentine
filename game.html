@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basta! 🎮</title>
+    <link rel="stylesheet" href="game-styles.css">
+</head>
+<body>
+    <div class="hearts-background"></div>
+    
+    <div class="game-container">
+        <!-- Header -->
+        <div class="game-header">
+            <h1 class="game-title">Basta! 💕</h1>
+            <div class="round-info">
+                <span class="round-number">Round <span id="roundNumber">1</span></span>
+                <span class="letter-display">Letter: <span id="currentLetter">A</span></span>
+            </div>
+        </div>
+
+        <!-- Countdown bar (shown when someone clicks Basta) -->
+        <div id="countdownBar" class="countdown-bar hidden">
+            <div class="countdown-bar-content">
+                <span class="countdown-bar-message">
+                    <span id="bastaPlayerName">Player</span> called Basta!
+                </span>
+                <span class="countdown-bar-timer" id="countdownTimer">10</span>
+            </div>
+            <div class="countdown-bar-progress" id="countdownProgress"></div>
+        </div>
+
+        <!-- Scores -->
+        <div class="scores-container">
+            <div id="scoresList" class="scores-list">
+                <!-- Scores will be added dynamically -->
+            </div>
+        </div>
+
+        <!-- Game area -->
+        <div class="game-area">
+            <!-- Answer inputs -->
+            <div class="answers-section">
+                <h3>Your Answers</h3>
+                <form id="answersForm" class="answers-form">
+                    <!-- Answer inputs will be generated here -->
+                </form>
+            </div>
+
+            <!-- Basta button -->
+            <div class="basta-button-container">
+                <button id="bastaBtn" class="btn-basta">
+                    Basta! 🎯
+                </button>
+            </div>
+        </div>
+
+        <!-- Validation area (shown after answers are revealed) -->
+        <div id="validationArea" class="validation-area hidden">
+            <h2>Validate Answers</h2>
+            <p class="validation-instructions">Review each other's answers and mark them as valid or invalid</p>
+            <div id="validationContent" class="validation-grid">
+                <!-- Validation UI will be shown here -->
+            </div>
+            <button id="nextRoundBtn" class="btn-next">Next Round 🎮</button>
+        </div>
+
+        <!-- Winner Screen (shown after 10 rounds) -->
+        <div id="winnerScreen" class="winner-screen hidden">
+            <div class="winner-content">
+                <h1 class="winner-title">Game Over!</h1>
+                <div class="trophy">🏆</div>
+                <h2 class="winner-announcement" id="winnerName">Winner</h2>
+                <div class="final-scores" id="finalScores">
+                    <!-- Final scores will be shown here -->
+                </div>
+                <button id="playAgainBtn" class="btn-play-again">Play Again 🎮</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

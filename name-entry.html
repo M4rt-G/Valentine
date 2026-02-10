@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Your Name 💕</title>
+    <link rel="stylesheet" href="name-entry-styles.css">
+</head>
+<body>
+    <div class="hearts-background"></div>
+    
+    <div class="container">
+        <h1 class="title">Let's Play Together! 💕</h1>
+        <p class="subtitle">Enter your name to join the fun</p>
+        
+        <div class="input-container">
+            <input 
+                type="text" 
+                id="playerName" 
+                placeholder="Your beautiful name..." 
+                maxlength="20"
+                autocomplete="off"
+            >
+        </div>
+        
+        <button id="joinBtn" class="btn-join">
+            Join Game 💖
+        </button>
+        
+        <div id="errorMessage" class="error-message"></div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="name-entry.js"></script>
+</body>
+</html>
