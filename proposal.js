@@ -43,7 +43,7 @@ noBtn.addEventListener('click', (e) => {
 yesBtn.addEventListener('click', () => {
     // Add celebration animation
     yesBtn.style.transform = 'scale(1.2)';
-    yesBtn.innerHTML = 'Yay! 💕💕💕';
+    yesBtn.innerHTML = 'A Huevo!!';
     
     // Create hearts explosion
     createHeartsExplosion();
