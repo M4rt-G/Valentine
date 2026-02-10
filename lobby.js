@@ -1,5 +1,5 @@
 // Connect to Socket.IO server
-const socket = io('http://localhost:3000');
+const socket = io('https://valentine-production-eafc.up.railway.app/');
 
 const playersList = document.getElementById('playersList');
 const startGameBtn = document.getElementById('startGameBtn');

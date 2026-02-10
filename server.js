@@ -13,7 +13,7 @@ const io = new Server(server, {
 });
 
 const PORT = process.env.PORT || 3000;
-const MAX_ROUNDS = 2; // Game ends after 10 rounds
+const MAX_ROUNDS = 10; // Game ends after 10 rounds
 
 // Serve static files
 app.use(express.static(path.join(__dirname)));
@@ -161,7 +161,7 @@ io.on('connection', (socket) => {
         });
         
         // Start 10-second countdown for others
-        let countdown = 3;
+        let countdown = 10;
         const countdownInterval = setInterval(() => {
             countdown--;
             socket.broadcast.emit('bastaCountdown', { 
@@ -471,5 +471,5 @@ function getCurrentGameState() {
 // Start server
 server.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
-    console.log(`Open http://localhost:${PORT} to start playing!`);
+    console.log(`Open https://valentine-production-eafc.up.railway.app/${PORT} to start playing!`);
 });

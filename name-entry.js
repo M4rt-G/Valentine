@@ -1,6 +1,6 @@
 // Connect to Socket.IO server
 // Change this URL to your deployed backend URL when ready
-const socket = io('http://localhost:3000');
+const socket = io('https://valentine-production-eafc.up.railway.app/');
 
 const playerNameInput = document.getElementById('playerName');
 const joinBtn = document.getElementById('joinBtn');
